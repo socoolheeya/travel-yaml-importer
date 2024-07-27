@@ -47,7 +47,7 @@ public class YamlEnvironmentPostProcessor implements EnvironmentPostProcessor, O
 
         Resource[] resources = new Resource[]{};
         try {
-            resources = resourcePatternResolver.getResources("classpath*:/application-*.yml");
+            resources = resourcePatternResolver.getResources("classpath*:config/travel-*.yml");
         } catch (IOException e) {
             log.error("{}", e.getMessage(), e);
         }
