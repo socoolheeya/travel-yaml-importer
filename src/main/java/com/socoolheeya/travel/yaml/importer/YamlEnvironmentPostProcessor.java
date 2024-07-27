@@ -93,8 +93,7 @@ public class YamlEnvironmentPostProcessor implements EnvironmentPostProcessor, O
             return propertySourceList;
         }
         catch (IOException ex) {
-            throw new IllegalStateException(
-                    "Failed to load yaml configuration from " + path, ex);
+            throw new IllegalStateException("Failed to load yaml configuration from " + path, ex);
         }
     }
 
