@@ -85,7 +85,7 @@ public class YamlEnvironmentPostProcessor implements EnvironmentPostProcessor, O
                             return false;
                         }
                         return environment.acceptsProfiles(Profiles.of(profiles));
-                    }).collect(Collectors.toList());
+                    }).toList();
 
             propertySourceList = sortProfilePriority(environment, propertySourceList);
             propertySourceList.addAll(defaultPropertySource);
